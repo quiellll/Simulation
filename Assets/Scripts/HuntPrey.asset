@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db249917b7c50574eaa600c74aff1437, type: 3}
+  m_Name: HuntPrey
+  m_EditorClassIdentifier: 
+  data:
+    graphs:
+    - name: HuntPrey
+      id: 9d9b2d8e-37d2-44a7-9a86-da310cb272e0
+      graph:
+        rid: 4394323692743557128
+      nodes:
+      - name: 
+        id: 2537ea50-b311-4ddc-a915-8fe09a2532b6
+        position: {x: 0, y: 0}
+        node:
+          rid: 4394323692743557129
+        references: []
+        parentIds: []
+        childIds:
+        - f0d046a3-011d-4a12-b08e-c0f0f47d741d
+      - name: IsPreyHidden
+        id: f0d046a3-011d-4a12-b08e-c0f0f47d741d
+        position: {x: 0, y: 200}
+        node:
+          rid: 4394323692743557131
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 2537ea50-b311-4ddc-a915-8fe09a2532b6
+        childIds:
+        - c9dae140-d02d-4ae4-92b8-d7db099bac7f
+      - name: 
+        id: c9dae140-d02d-4ae4-92b8-d7db099bac7f
+        position: {x: 0, y: 400}
+        node:
+          rid: 4394323692743557132
+        references: []
+        parentIds:
+        - f0d046a3-011d-4a12-b08e-c0f0f47d741d
+        childIds:
+        - e82dd2d7-51f8-4f6d-9f05-c837318220da
+      - name: IsPreyNearby
+        id: e82dd2d7-51f8-4f6d-9f05-c837318220da
+        position: {x: 0, y: 600}
+        node:
+          rid: 4394323692743557133
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - c9dae140-d02d-4ae4-92b8-d7db099bac7f
+        childIds:
+        - ffdfd735-e37b-4e21-b7fb-94a72b8a34a2
+      - name: 
+        id: ffdfd735-e37b-4e21-b7fb-94a72b8a34a2
+        position: {x: 0, y: 800}
+        node:
+          rid: 4394323692743557134
+        references: []
+        parentIds:
+        - e82dd2d7-51f8-4f6d-9f05-c837318220da
+        childIds:
+        - 6d3f24ac-2528-4147-91e8-486d1594c1e0
+        - 924bdc5f-8142-47b1-9088-572ede3a3c72
+      - name: IsMelee
+        id: 6d3f24ac-2528-4147-91e8-486d1594c1e0
+        position: {x: -150, y: 1000}
+        node:
+          rid: 4394323692743557135
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - ffdfd735-e37b-4e21-b7fb-94a72b8a34a2
+        childIds:
+        - 07c637f3-3d45-4276-9321-ec6ea9eb6afc
+      - name: 
+        id: 07c637f3-3d45-4276-9321-ec6ea9eb6afc
+        position: {x: -150, y: 1200}
+        node:
+          rid: 4394323692743557136
+        references: []
+        parentIds:
+        - 6d3f24ac-2528-4147-91e8-486d1594c1e0
+        childIds:
+        - c207b7d8-a2d6-4e6f-8457-8c9f7ffb606f
+        - d147ab69-652e-4af2-8db1-c48b9bdfff74
+      - name: IsPreyFighting
+        id: c207b7d8-a2d6-4e6f-8457-8c9f7ffb606f
+        position: {x: -300, y: 1400}
+        node:
+          rid: 4394323692743557137
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 07c637f3-3d45-4276-9321-ec6ea9eb6afc
+        childIds:
+        - 2e991dbe-e8d1-4215-8d79-f3c6253f582f
+      - name: EnterFightBT
+        id: 2e991dbe-e8d1-4215-8d79-f3c6253f582f
+        position: {x: -300, y: 1600}
+        node:
+          rid: 4394323692743557138
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - c207b7d8-a2d6-4e6f-8457-8c9f7ffb606f
+        childIds: []
+      - name: CatchPrey
+        id: d147ab69-652e-4af2-8db1-c48b9bdfff74
+        position: {x: 0, y: 1400}
+        node:
+          rid: 4394323692743557139
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 07c637f3-3d45-4276-9321-ec6ea9eb6afc
+        childIds: []
+      - name: RunTowardsPrey
+        id: 924bdc5f-8142-47b1-9088-572ede3a3c72
+        position: {x: 150, y: 1000}
+        node:
+          rid: 4394323692743557140
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - ffdfd735-e37b-4e21-b7fb-94a72b8a34a2
+        childIds: []
+    pushPerceptions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4394323692743557128
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557129
+      type: {class: LoopNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        Iterations: -1
+    - rid: 4394323692743557131
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557132
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557133
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557134
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557135
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557136
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557137
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557138
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557139
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557140
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 

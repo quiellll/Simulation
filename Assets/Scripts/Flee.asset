@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db249917b7c50574eaa600c74aff1437, type: 3}
+  m_Name: Flee
+  m_EditorClassIdentifier: 
+  data:
+    graphs:
+    - name: Flee
+      id: 24b63def-78a1-450f-9e2d-ebd69de340bc
+      graph:
+        rid: 4394323692743557181
+      nodes:
+      - name: 
+        id: abb624b5-116c-44b2-a391-75602d174a01
+        position: {x: 75, y: 0}
+        node:
+          rid: 4394323692743557182
+        references: []
+        parentIds: []
+        childIds:
+        - cc132c6d-ab2a-4335-ac96-06c269fee6ee
+      - name: 
+        id: cc132c6d-ab2a-4335-ac96-06c269fee6ee
+        position: {x: 75, y: 200}
+        node:
+          rid: 4394323692743557183
+        references: []
+        parentIds:
+        - abb624b5-116c-44b2-a391-75602d174a01
+        childIds:
+        - 62ccbd25-d9b1-4f86-8554-39ae0da153c4
+        - 04a13889-7565-4a6f-8cbd-2f2200f3fdc4
+      - name: SetDirection
+        id: 62ccbd25-d9b1-4f86-8554-39ae0da153c4
+        position: {x: -150, y: 400}
+        node:
+          rid: 4394323692743557184
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - cc132c6d-ab2a-4335-ac96-06c269fee6ee
+        childIds: []
+      - name: IsTrapped
+        id: 13b2ecb3-3aaa-4e89-b609-f50987e398fe
+        position: {x: 150, y: 600}
+        node:
+          rid: 4394323692743557185
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 04a13889-7565-4a6f-8cbd-2f2200f3fdc4
+        childIds:
+        - fc5383ab-3012-44d2-b9fe-44908ffb818d
+      - name: IsInDanger
+        id: 2b9c8f2f-9fa9-4a4e-9975-135680b47841
+        position: {x: 150, y: 1000}
+        node:
+          rid: 4394323692743557187
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - fc5383ab-3012-44d2-b9fe-44908ffb818d
+        childIds:
+        - 9f1166cc-eb2b-47bd-ac8e-dee6dae32afd
+      - name: 
+        id: 9f1166cc-eb2b-47bd-ac8e-dee6dae32afd
+        position: {x: 150, y: 1200}
+        node:
+          rid: 4394323692743557188
+        references: []
+        parentIds:
+        - 2b9c8f2f-9fa9-4a4e-9975-135680b47841
+        childIds: []
+      - name: 
+        id: fc5383ab-3012-44d2-b9fe-44908ffb818d
+        position: {x: 150, y: 800}
+        node:
+          rid: 4394323692743557189
+        references: []
+        parentIds:
+        - 13b2ecb3-3aaa-4e89-b609-f50987e398fe
+        childIds:
+        - 2b9c8f2f-9fa9-4a4e-9975-135680b47841
+      - name: SetDirection
+        id: b2db7f8a-0340-4f76-a47e-b9c0c8c1c26f
+        position: {x: 450, y: 800}
+        node:
+          rid: 4394323692743557190
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 5b862a24-d5fb-4ff6-8a1b-669823645fa8
+        childIds: []
+      - name: 
+        id: 04a13889-7565-4a6f-8cbd-2f2200f3fdc4
+        position: {x: 300, y: 400}
+        node:
+          rid: 4394323692743557191
+        references: []
+        parentIds:
+        - cc132c6d-ab2a-4335-ac96-06c269fee6ee
+        childIds:
+        - 13b2ecb3-3aaa-4e89-b609-f50987e398fe
+        - 5b862a24-d5fb-4ff6-8a1b-669823645fa8
+      - name: IsInDanger
+        id: 5b862a24-d5fb-4ff6-8a1b-669823645fa8
+        position: {x: 450, y: 600}
+        node:
+          rid: 4394323692743557192
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 04a13889-7565-4a6f-8cbd-2f2200f3fdc4
+        childIds:
+        - b2db7f8a-0340-4f76-a47e-b9c0c8c1c26f
+    pushPerceptions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4394323692743557181
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557182
+      type: {class: LoopNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        Iterations: -1
+    - rid: 4394323692743557183
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557184
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557185
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557187
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557188
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557189
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557190
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557191
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557192
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 

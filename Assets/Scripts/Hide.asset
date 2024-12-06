@@ -1,0 +1,341 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db249917b7c50574eaa600c74aff1437, type: 3}
+  m_Name: Hide
+  m_EditorClassIdentifier: 
+  data:
+    graphs:
+    - name: Hide
+      id: 0076e62b-9343-42d3-9405-41251fb399b9
+      graph:
+        rid: 4394323692743557141
+      nodes:
+      - name: 
+        id: 6715599e-3d8a-4ef7-83c9-050ef87b8904
+        position: {x: 300, y: 0}
+        node:
+          rid: 4394323692743557142
+        references: []
+        parentIds: []
+        childIds:
+        - e680ee16-00f7-44c6-9dc2-25decc0af75e
+      - name: 
+        id: b810a0ec-da02-4dcf-a69a-e8966afdbe41
+        position: {x: -300, y: 400}
+        node:
+          rid: 4394323692743557143
+        references: []
+        parentIds:
+        - e680ee16-00f7-44c6-9dc2-25decc0af75e
+        childIds:
+        - 4552839b-f712-4170-8e2e-24a0d1193c1e
+        - fe3bf8c4-dedd-4556-8397-d679863d3893
+      - name: ExistsHideout
+        id: 4552839b-f712-4170-8e2e-24a0d1193c1e
+        position: {x: -450, y: 600}
+        node:
+          rid: 4394323692743557144
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - b810a0ec-da02-4dcf-a69a-e8966afdbe41
+        childIds:
+        - 406112f9-2a13-40d0-bb03-4c31d60da9fe
+      - name: RunToHideout
+        id: 406112f9-2a13-40d0-bb03-4c31d60da9fe
+        position: {x: -450, y: 800}
+        node:
+          rid: 4394323692743557145
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 4552839b-f712-4170-8e2e-24a0d1193c1e
+        childIds: []
+      - name: EnterFleeBT
+        id: fe3bf8c4-dedd-4556-8397-d679863d3893
+        position: {x: -150, y: 600}
+        node:
+          rid: 4394323692743557146
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - b810a0ec-da02-4dcf-a69a-e8966afdbe41
+        childIds: []
+      - name: 
+        id: e680ee16-00f7-44c6-9dc2-25decc0af75e
+        position: {x: 300, y: 200}
+        node:
+          rid: 4394323692743557147
+        references: []
+        parentIds:
+        - 6715599e-3d8a-4ef7-83c9-050ef87b8904
+        childIds:
+        - b810a0ec-da02-4dcf-a69a-e8966afdbe41
+        - f0a86f4a-e2fa-446e-8936-e4925b36b2ad
+        - 5187f8a1-9088-49ec-b819-f9655c5fd51a
+      - name: 
+        id: f0a86f4a-e2fa-446e-8936-e4925b36b2ad
+        position: {x: 300, y: 400}
+        node:
+          rid: 4394323692743557148
+        references: []
+        parentIds:
+        - e680ee16-00f7-44c6-9dc2-25decc0af75e
+        childIds:
+        - 6a00573d-22dc-4aed-97da-d3a65071c757
+        - 7c298151-4017-47df-a208-56b78059ae66
+      - name: IsTrapped
+        id: 6a00573d-22dc-4aed-97da-d3a65071c757
+        position: {x: 150, y: 600}
+        node:
+          rid: 4394323692743557149
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - f0a86f4a-e2fa-446e-8936-e4925b36b2ad
+        childIds:
+        - 9d1e7359-bb55-4acf-8536-6ee6e2fbf03b
+      - name: 
+        id: 9d1e7359-bb55-4acf-8536-6ee6e2fbf03b
+        position: {x: 150, y: 800}
+        node:
+          rid: 4394323692743557150
+        references: []
+        parentIds:
+        - 6a00573d-22dc-4aed-97da-d3a65071c757
+        childIds:
+        - 7a44f05b-0d00-4111-b4a3-148db3f84f60
+      - name: HasReachedHideout
+        id: 3c5acfe5-4686-4bfb-9f95-a11c8de84ede
+        position: {x: 0, y: 1200}
+        node:
+          rid: 4394323692743557151
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 7a44f05b-0d00-4111-b4a3-148db3f84f60
+        childIds:
+        - 7c40c2c7-59df-47ea-91a0-b765fed33f03
+      - name: Hide
+        id: 7c40c2c7-59df-47ea-91a0-b765fed33f03
+        position: {x: 0, y: 1400}
+        node:
+          rid: 4394323692743557152
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 3c5acfe5-4686-4bfb-9f95-a11c8de84ede
+        childIds: []
+      - name: 
+        id: 7a44f05b-0d00-4111-b4a3-148db3f84f60
+        position: {x: 150, y: 1000}
+        node:
+          rid: 4394323692743557154
+        references: []
+        parentIds:
+        - 9d1e7359-bb55-4acf-8536-6ee6e2fbf03b
+        childIds:
+        - 3c5acfe5-4686-4bfb-9f95-a11c8de84ede
+        - ffed412c-530e-4b00-aa4c-1e9f52e0e9af
+      - name: IsInDanger
+        id: ffed412c-530e-4b00-aa4c-1e9f52e0e9af
+        position: {x: 300, y: 1200}
+        node:
+          rid: 4394323692743557155
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 7a44f05b-0d00-4111-b4a3-148db3f84f60
+        childIds:
+        - 1fc836bf-b12d-4da9-814e-d190acae6cd7
+      - name: RunToHideout
+        id: 1fc836bf-b12d-4da9-814e-d190acae6cd7
+        position: {x: 300, y: 1400}
+        node:
+          rid: 4394323692743557156
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - ffed412c-530e-4b00-aa4c-1e9f52e0e9af
+        childIds: []
+      - name: Flee
+        id: 7c298151-4017-47df-a208-56b78059ae66
+        position: {x: 450, y: 600}
+        node:
+          rid: 4394323692743557157
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - f0a86f4a-e2fa-446e-8936-e4925b36b2ad
+        childIds: []
+      - name: 
+        id: 5187f8a1-9088-49ec-b819-f9655c5fd51a
+        position: {x: 900, y: 400}
+        node:
+          rid: 4394323692743557158
+        references: []
+        parentIds:
+        - e680ee16-00f7-44c6-9dc2-25decc0af75e
+        childIds:
+        - 561d8710-bd87-4b11-ba62-1779cb3bc17a
+        - 8c0ad75d-7b1a-411e-8c28-21ed7e73c196
+      - name: IsInDanger
+        id: 561d8710-bd87-4b11-ba62-1779cb3bc17a
+        position: {x: 750, y: 600}
+        node:
+          rid: 4394323692743557159
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 5187f8a1-9088-49ec-b819-f9655c5fd51a
+        childIds:
+        - b1a35ea5-2f42-44db-a2d5-0f286cb2263e
+      - name: Hide
+        id: b1a35ea5-2f42-44db-a2d5-0f286cb2263e
+        position: {x: 750, y: 800}
+        node:
+          rid: 4394323692743557160
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 561d8710-bd87-4b11-ba62-1779cb3bc17a
+        childIds: []
+      - name: Exit
+        id: 8c0ad75d-7b1a-411e-8c28-21ed7e73c196
+        position: {x: 1050, y: 600}
+        node:
+          rid: 4394323692743557161
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 5187f8a1-9088-49ec-b819-f9655c5fd51a
+        childIds: []
+    pushPerceptions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4394323692743557141
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557142
+      type: {class: LoopNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        Iterations: -1
+    - rid: 4394323692743557143
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557144
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557145
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557146
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557147
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557148
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557149
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557150
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557151
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557152
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557154
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557155
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557156
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557157
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557158
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557159
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557160
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557161
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 

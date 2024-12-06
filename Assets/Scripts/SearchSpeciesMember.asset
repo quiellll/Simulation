@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db249917b7c50574eaa600c74aff1437, type: 3}
+  m_Name: SearchSpeciesMember
+  m_EditorClassIdentifier: 
+  data:
+    graphs:
+    - name: SearchSpeciesMember
+      id: 81361746-da7e-42a0-8561-68f4c79d24cb
+      graph:
+        rid: 4394323692743557120
+      nodes:
+      - name: 
+        id: c9922a74-f5bf-4d14-b41b-dfe6dc6022b2
+        position: {x: 0, y: 0}
+        node:
+          rid: 4394323692743557121
+        references: []
+        parentIds: []
+        childIds:
+        - 705b3b1f-5580-4bdb-b175-f4fb895d1252
+      - name: IsNearSameSpecies
+        id: 705b3b1f-5580-4bdb-b175-f4fb895d1252
+        position: {x: 0, y: 200}
+        node:
+          rid: 4394323692743557123
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - c9922a74-f5bf-4d14-b41b-dfe6dc6022b2
+        childIds:
+        - 98d7fb60-92d6-4083-a572-6f6afe0a3615
+      - name: Is Danger
+        id: 98d7fb60-92d6-4083-a572-6f6afe0a3615
+        position: {x: 0, y: 400}
+        node:
+          rid: 4394323692743557124
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 705b3b1f-5580-4bdb-b175-f4fb895d1252
+        childIds:
+        - 079ca8d5-37ad-494d-88eb-f65759c8547b
+      - name: 
+        id: 079ca8d5-37ad-494d-88eb-f65759c8547b
+        position: {x: 0, y: 600}
+        node:
+          rid: 4394323692743557125
+        references: []
+        parentIds:
+        - 98d7fb60-92d6-4083-a572-6f6afe0a3615
+        childIds:
+        - 0e28f848-244b-4eba-9ff7-9d99313884d9
+      - name: ReachedMember
+        id: 0e28f848-244b-4eba-9ff7-9d99313884d9
+        position: {x: 0, y: 800}
+        node:
+          rid: 4394323692743557126
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 079ca8d5-37ad-494d-88eb-f65759c8547b
+        childIds:
+        - d79c3370-a59c-4f82-994e-c7a90a1f347e
+      - name: GoToSpeciesMember
+        id: d79c3370-a59c-4f82-994e-c7a90a1f347e
+        position: {x: 0, y: 1000}
+        node:
+          rid: 4394323692743557127
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 0e28f848-244b-4eba-9ff7-9d99313884d9
+        childIds: []
+    pushPerceptions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4394323692743557120
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557121
+      type: {class: LoopNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        Iterations: -1
+    - rid: 4394323692743557123
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557124
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557125
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557126
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557127
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 

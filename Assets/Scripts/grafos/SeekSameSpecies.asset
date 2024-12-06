@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db249917b7c50574eaa600c74aff1437, type: 3}
+  m_Name: SeekSameSpecies
+  m_EditorClassIdentifier: 
+  data:
+    graphs:
+    - name: Seek Same Species BT
+      id: c6221fb7-d957-4d30-a4a2-963a371e3ef3
+      graph:
+        rid: 4394323715651010821
+      nodes:
+      - name: 
+        id: f3b0f45b-3524-4da5-ab53-5b798a507adb
+        position: {x: 0, y: 0}
+        node:
+          rid: 4394323715651010828
+        references: []
+        parentIds: []
+        childIds:
+        - b131a627-0f82-4ca1-9876-2dfbda652717
+      - name: 
+        id: b131a627-0f82-4ca1-9876-2dfbda652717
+        position: {x: 0, y: 200}
+        node:
+          rid: 4394323715651010822
+        references: []
+        parentIds:
+        - f3b0f45b-3524-4da5-ab53-5b798a507adb
+        childIds:
+        - 4c65ca8b-ac9c-4d69-bf37-71f5c570bbbe
+        - 63fb8a94-a85b-4bcd-bd0f-a1cd3e8c2c25
+      - name: Wander
+        id: ac00a793-62a9-482c-9ced-fc7764c92917
+        position: {x: 150, y: 800}
+        node:
+          rid: 4394323715651010823
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - d7a61917-4406-4c12-8b1b-290341249a5f
+        childIds: []
+      - name: NearSameSpecies
+        id: 4c65ca8b-ac9c-4d69-bf37-71f5c570bbbe
+        position: {x: -150, y: 400}
+        node:
+          rid: 4394323715651010824
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - b131a627-0f82-4ca1-9876-2dfbda652717
+        childIds:
+        - 6d498124-5227-45d8-84d5-19a5cb30613f
+      - name: 
+        id: 63fb8a94-a85b-4bcd-bd0f-a1cd3e8c2c25
+        position: {x: 150, y: 400}
+        node:
+          rid: 4394323715651010825
+        references: []
+        parentIds:
+        - b131a627-0f82-4ca1-9876-2dfbda652717
+        childIds:
+        - d7a61917-4406-4c12-8b1b-290341249a5f
+      - name: 
+        id: d7a61917-4406-4c12-8b1b-290341249a5f
+        position: {x: 150, y: 600}
+        node:
+          rid: 4394323715651010826
+        references: []
+        parentIds:
+        - 63fb8a94-a85b-4bcd-bd0f-a1cd3e8c2c25
+        childIds:
+        - ac00a793-62a9-482c-9ced-fc7764c92917
+      - name: GoToSameSpecies
+        id: 6d498124-5227-45d8-84d5-19a5cb30613f
+        position: {x: -150, y: 600}
+        node:
+          rid: 4394323715651010827
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 4c65ca8b-ac9c-4d69-bf37-71f5c570bbbe
+        childIds: []
+    pushPerceptions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4394323715651010821
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323715651010822
+      type: {class: SelectorNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323715651010823
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323715651010824
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323715651010825
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323715651010826
+      type: {class: SuccederNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323715651010827
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323715651010828
+      type: {class: LoopNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        Iterations: -1

@@ -1,0 +1,313 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db249917b7c50574eaa600c74aff1437, type: 3}
+  m_Name: HerbivoreSearchFood
+  m_EditorClassIdentifier: 
+  data:
+    graphs:
+    - name: HerbivoreSearchFood
+      id: 0244feba-ef23-405d-9f1f-993ecdd5d95d
+      graph:
+        rid: 4394323692743557162
+      nodes:
+      - name: 
+        id: 3a50fc0a-84fd-472d-a520-51f4f5b1fbb3
+        position: {x: 150, y: 0}
+        node:
+          rid: 4394323692743557163
+        references: []
+        parentIds: []
+        childIds:
+        - 3611c2db-603f-43c9-97a7-928d3e11e080
+      - name: 
+        id: 3611c2db-603f-43c9-97a7-928d3e11e080
+        position: {x: 150, y: 200}
+        node:
+          rid: 4394323692743557164
+        references: []
+        parentIds:
+        - 3a50fc0a-84fd-472d-a520-51f4f5b1fbb3
+        childIds:
+        - 3a96ab19-3b03-40b7-87ef-08775c564133
+        - 26f5d2a8-cb24-4ba3-a620-d421939b3216
+        - 6b34bef8-af0b-4802-a29d-2af9d399715c
+      - name: IsMushroomEater
+        id: 3a96ab19-3b03-40b7-87ef-08775c564133
+        position: {x: -300, y: 400}
+        node:
+          rid: 4394323692743557165
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 3611c2db-603f-43c9-97a7-928d3e11e080
+        childIds:
+        - 134b252b-3ca1-4069-8a56-5c4b3b22b03c
+      - name: SearchMushroom
+        id: 134b252b-3ca1-4069-8a56-5c4b3b22b03c
+        position: {x: -300, y: 600}
+        node:
+          rid: 4394323692743557166
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 3a96ab19-3b03-40b7-87ef-08775c564133
+        childIds: []
+      - name: SearchPlant
+        id: 26f5d2a8-cb24-4ba3-a620-d421939b3216
+        position: {x: 0, y: 400}
+        node:
+          rid: 4394323692743557167
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323715651010560
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 3611c2db-603f-43c9-97a7-928d3e11e080
+        childIds: []
+      - name: IsInDanger
+        id: 6b34bef8-af0b-4802-a29d-2af9d399715c
+        position: {x: 600, y: 400}
+        node:
+          rid: 4394323692743557168
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 3611c2db-603f-43c9-97a7-928d3e11e080
+        childIds:
+        - b253f683-6923-49ce-a1e6-cd537652d13f
+      - name: 
+        id: b253f683-6923-49ce-a1e6-cd537652d13f
+        position: {x: 600, y: 600}
+        node:
+          rid: 4394323692743557169
+        references: []
+        parentIds:
+        - 6b34bef8-af0b-4802-a29d-2af9d399715c
+        childIds:
+        - c3bec55d-7d72-42b0-943f-66b2f2f9c8a8
+        - 64166485-b702-4f58-95d0-798d320e21de
+        - 48113376-d8e8-44d8-a8c0-3e5d085db3ed
+      - name: ExistsFood
+        id: c3bec55d-7d72-42b0-943f-66b2f2f9c8a8
+        position: {x: 300, y: 800}
+        node:
+          rid: 4394323692743557170
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - b253f683-6923-49ce-a1e6-cd537652d13f
+        childIds:
+        - 7306836c-2214-4a49-9fe7-2cfa51a93dea
+      - name: 
+        id: 7306836c-2214-4a49-9fe7-2cfa51a93dea
+        position: {x: 300, y: 1000}
+        node:
+          rid: 4394323692743557171
+        references: []
+        parentIds:
+        - c3bec55d-7d72-42b0-943f-66b2f2f9c8a8
+        childIds:
+        - 0f9a37a5-30b2-4924-9ca3-5fb1ffb5beca
+      - name: SearchFood
+        id: 0f9a37a5-30b2-4924-9ca3-5fb1ffb5beca
+        position: {x: 300, y: 1200}
+        node:
+          rid: 4394323692743557172
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 7306836c-2214-4a49-9fe7-2cfa51a93dea
+        childIds: []
+      - name: HasReachedFood
+        id: 64166485-b702-4f58-95d0-798d320e21de
+        position: {x: 600, y: 800}
+        node:
+          rid: 4394323692743557173
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - b253f683-6923-49ce-a1e6-cd537652d13f
+        childIds:
+        - 20d11020-65b0-4a89-82c8-c1bbc3db09aa
+      - name: 
+        id: 20d11020-65b0-4a89-82c8-c1bbc3db09aa
+        position: {x: 600, y: 1000}
+        node:
+          rid: 4394323692743557174
+        references: []
+        parentIds:
+        - 64166485-b702-4f58-95d0-798d320e21de
+        childIds:
+        - a067d812-ec43-4ecc-97df-18e40f140d9e
+      - name: GoToFood
+        id: a067d812-ec43-4ecc-97df-18e40f140d9e
+        position: {x: 600, y: 1200}
+        node:
+          rid: 4394323692743557175
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 20d11020-65b0-4a89-82c8-c1bbc3db09aa
+        childIds: []
+      - name: HasFinishedEating
+        id: 00afd88a-a4a0-4ce6-80a1-4e9277948d00
+        position: {x: 900, y: 1200}
+        node:
+          rid: 4394323692743557177
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - bb308406-3aeb-4b8f-a99d-fb72a8fa64a7
+        childIds:
+        - 00f2fe08-4abe-45ec-bf47-14259682eb26
+      - name: IsInDanger
+        id: 48113376-d8e8-44d8-a8c0-3e5d085db3ed
+        position: {x: 900, y: 800}
+        node:
+          rid: 4394323692743557178
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - b253f683-6923-49ce-a1e6-cd537652d13f
+        childIds:
+        - bb308406-3aeb-4b8f-a99d-fb72a8fa64a7
+      - name: 
+        id: bb308406-3aeb-4b8f-a99d-fb72a8fa64a7
+        position: {x: 900, y: 1000}
+        node:
+          rid: 4394323692743557179
+        references: []
+        parentIds:
+        - 48113376-d8e8-44d8-a8c0-3e5d085db3ed
+        childIds:
+        - 00afd88a-a4a0-4ce6-80a1-4e9277948d00
+      - name: Eat
+        id: 00f2fe08-4abe-45ec-bf47-14259682eb26
+        position: {x: 900, y: 1400}
+        node:
+          rid: 4394323692743557180
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 00afd88a-a4a0-4ce6-80a1-4e9277948d00
+        childIds: []
+    pushPerceptions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4394323692743557162
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557163
+      type: {class: LoopNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        Iterations: -1
+    - rid: 4394323692743557164
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557165
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557166
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557167
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557168
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557169
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323692743557170
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557171
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557172
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557173
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557174
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557175
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557177
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557178
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557179
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323692743557180
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323715651010560
+      type: {class: SimpleAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        method:
+          componentName: 
+          methodName: 
