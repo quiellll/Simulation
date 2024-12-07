@@ -35,5 +35,8 @@ public class AgentAnimator : MonoBehaviour
         _animator.Play(animationPrefix + "Death");
     }
 
-
+    public void SetAttack()
+    {
+        _animator.Play(animationPrefix + "Attack");
+    }
 }

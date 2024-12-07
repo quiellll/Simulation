@@ -65,7 +65,43 @@ PrefabInstance:
       addedObject: {fileID: 7386997478849585050}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6733729013677127176}
+      addedObject: {fileID: 2867966522194294842}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7755589708707246222}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 336413692263685503}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6928904873275627790}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3140171510776962802}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3058128591475114729}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6792386774302207228}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3763275291411466964}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2102507204791270332}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4448637185553925626}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4218794716321100295}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7396728099737635583}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4471918906693739073}
   m_SourcePrefab: {fileID: 100100000, guid: 74e7307805d873f409ae0055ecccb9e3, type: 3}
 --- !u!1 &1380551784180062164 stripped
 GameObject:
@@ -93,7 +129,29 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.68
   m_Center: {x: 0, y: 1.37, z: 0.18}
---- !u!114 &6733729013677127176
+--- !u!195 &2867966522194294842
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &7755589708707246222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,11 +160,762 @@ MonoBehaviour:
   m_GameObject: {fileID: 1380551784180062164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 685e64742e522c34d9bbcdcb62378ccf, type: 3}
+  m_Script: {fileID: 11500000, guid: 81016613ea3feb04b8c61c0b1124211a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  targetThreshold: 1
+  minDistanceToTarget: 0.3
+  drawGizmos: 0
+  targetColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &336413692263685503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96310e38efad62f45badf4506f8c5d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _runSpeedMultiplier: 2
+--- !u!114 &6928904873275627790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad4445d95f31c84fbe6fc3e786967b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _healthBarOffset: {x: 0, y: 4, z: 0}
+--- !u!114 &3140171510776962802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d3a190a4a009d40a0b1b93301aee6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeSinceLastMeal: 0
+--- !u!114 &3058128591475114729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb24f567700e934a894d9887c6ce46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  executeOnLoop: 0
+  interruptOptions: 0
+  _eventHandler:
+    debugStatusChanges: 0
+    identifier: 
+  data:
+    graphs:
+    - name: Wolf US
+      id: d333ea99-c3e6-4111-8a50-08b160b277af
+      graph:
+        rid: 4394323734262710278
+      nodes:
+      - name: Is Eating
+        id: bbe874fb-9d86-408c-96f5-4069a319caca
+        position: {x: 168.8, y: -23.200005}
+        node:
+          rid: 4394323734262710279
+        references:
+        - fieldName: Variable
+          value:
+            rid: 4394323734262710280
+          fieldType: System.Func`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        parentIds:
+        - 485ccca6-2575-4037-bed3-b1798d2f44b8
+        childIds: []
+      - name: 
+        id: 485ccca6-2575-4037-bed3-b1798d2f44b8
+        position: {x: 593.6, y: -36.000004}
+        node:
+          rid: 4394323734262710281
+        references: []
+        parentIds:
+        - 43b8d56c-d348-435d-8ec9-5e33bd744219
+        childIds:
+        - bbe874fb-9d86-408c-96f5-4069a319caca
+      - name: 
+        id: b38a5eb9-e7b7-41eb-9ff2-edab9755c792
+        position: {x: 591.2, y: 119.2}
+        node:
+          rid: 4394323734262710282
+        references: []
+        parentIds:
+        - 43b8d56c-d348-435d-8ec9-5e33bd744219
+        childIds:
+        - e3ecc95c-93f5-49a4-92cd-fc58b6fbda5a
+      - name: 0,99
+        id: a9d42f60-cc6b-4ce9-9ab2-03b8b5c93dfd
+        position: {x: 591.2, y: 274.40002}
+        node:
+          rid: 4394323734262710283
+        references: []
+        parentIds:
+        - fe9dc798-3d6e-406b-81f5-f1108c338a42
+        childIds: []
+      - name: 1
+        id: 48c15a2d-609a-4443-ba4a-d629e813fd66
+        position: {x: 591.2, y: 561.60004}
+        node:
+          rid: 4394323734262710284
+        references: []
+        parentIds:
+        - 219fa931-023b-4c72-83cc-ac892dd89075
+        childIds: []
+      - name: 
+        id: ac9259ec-dac6-44ad-882b-d5a765bc708e
+        position: {x: 591.2, y: 406.40002}
+        node:
+          rid: 4394323734262710285
+        references: []
+        parentIds:
+        - fe9dc798-3d6e-406b-81f5-f1108c338a42
+        - 219fa931-023b-4c72-83cc-ac892dd89075
+        childIds:
+        - e3ecc95c-93f5-49a4-92cd-fc58b6fbda5a
+      - name: Last Meal Timer
+        id: e3ecc95c-93f5-49a4-92cd-fc58b6fbda5a
+        position: {x: 156, y: 260}
+        node:
+          rid: 4394323734262710286
+        references:
+        - fieldName: Variable
+          value:
+            rid: 4394323734262710287
+          fieldType: System.Func`1[[System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        parentIds:
+        - b38a5eb9-e7b7-41eb-9ff2-edab9755c792
+        - ac9259ec-dac6-44ad-882b-d5a765bc708e
+        childIds: []
+      - name: 
+        id: fe9dc798-3d6e-406b-81f5-f1108c338a42
+        position: {x: 897.6, y: 364.8}
+        node:
+          rid: 4394323734262710288
+        references: []
+        parentIds:
+        - 6bf9b938-3462-4384-be4c-3a44a6ca1bcf
+        childIds:
+        - a9d42f60-cc6b-4ce9-9ab2-03b8b5c93dfd
+        - ac9259ec-dac6-44ad-882b-d5a765bc708e
+      - name: 
+        id: 43b8d56c-d348-435d-8ec9-5e33bd744219
+        position: {x: 896, y: 73.59999}
+        node:
+          rid: 4394323734262710289
+        references: []
+        parentIds:
+        - 69864798-6cf0-4dcb-9aea-2d52213c863c
+        childIds:
+        - 485ccca6-2575-4037-bed3-b1798d2f44b8
+        - b38a5eb9-e7b7-41eb-9ff2-edab9755c792
+      - name: 
+        id: 219fa931-023b-4c72-83cc-ac892dd89075
+        position: {x: 897.6, y: 509.60004}
+        node:
+          rid: 4394323734262710290
+        references: []
+        parentIds:
+        - 8b6dbf6e-2ceb-4732-b3a0-0dfb8871d885
+        childIds:
+        - 48c15a2d-609a-4443-ba4a-d629e813fd66
+        - ac9259ec-dac6-44ad-882b-d5a765bc708e
+      - name: Wander
+        id: 8b6dbf6e-2ceb-4732-b3a0-0dfb8871d885
+        position: {x: 1254.4, y: 494.40002}
+        node:
+          rid: 4394323734262710291
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710296
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds: []
+        childIds:
+        - 219fa931-023b-4c72-83cc-ac892dd89075
+      - name: Seek Prey
+        id: 6bf9b938-3462-4384-be4c-3a44a6ca1bcf
+        position: {x: 1254.4, y: 348}
+        node:
+          rid: 4394323734262710292
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710295
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds: []
+        childIds:
+        - fe9dc798-3d6e-406b-81f5-f1108c338a42
+      - name: Die
+        id: 69864798-6cf0-4dcb-9aea-2d52213c863c
+        position: {x: 1252.8, y: 56.799995}
+        node:
+          rid: 4394323734262710293
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710297
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds: []
+        childIds:
+        - 43b8d56c-d348-435d-8ec9-5e33bd744219
+    - name: Wander
+      id: 6f37fdd7-8e1d-4a48-9d65-aa4c6373d9d1
+      graph:
+        rid: 4394323734262710272
+      nodes:
+      - name: 
+        id: 1e428c8d-dffe-4889-aa34-bfff45441ebb
+        position: {x: 0, y: 0}
+        node:
+          rid: 4394323734262710273
+        references: []
+        parentIds: []
+        childIds:
+        - 3500d5a5-bc1f-4088-8572-11638c5414f8
+        - 6331383f-3c1a-4c3d-b8a9-ca66208060ef
+      - name: Idle
+        id: 3500d5a5-bc1f-4088-8572-11638c5414f8
+        position: {x: -150, y: 200}
+        node:
+          rid: 4394323734262710274
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710276
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 1e428c8d-dffe-4889-aa34-bfff45441ebb
+        childIds: []
+      - name: Wander
+        id: 6331383f-3c1a-4c3d-b8a9-ca66208060ef
+        position: {x: 150, y: 200}
+        node:
+          rid: 4394323734262710275
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710277
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 1e428c8d-dffe-4889-aa34-bfff45441ebb
+        childIds: []
+    - name: Seek Prey
+      id: 70943326-a3ee-4e7c-83df-34158aaac978
+      graph:
+        rid: 4394323734262710298
+      nodes:
+      - name: 
+        id: e5e65338-05ce-4497-8fc3-d7b57cd710d3
+        position: {x: 262.5, y: 0}
+        node:
+          rid: 4394323734262710299
+        references: []
+        parentIds: []
+        childIds:
+        - cd8a46a0-36c8-46f8-9c84-c8b02f6fbcd6
+      - name: 
+        id: cd8a46a0-36c8-46f8-9c84-c8b02f6fbcd6
+        position: {x: 262.5, y: 200}
+        node:
+          rid: 4394323734262710300
+        references: []
+        parentIds:
+        - e5e65338-05ce-4497-8fc3-d7b57cd710d3
+        childIds:
+        - b2117939-0862-439f-a511-3393073d9749
+        - 3e22b665-e9af-47f9-bd81-a26c03151b6a
+      - name: 
+        id: b2117939-0862-439f-a511-3393073d9749
+        position: {x: -75, y: 400}
+        node:
+          rid: 4394323734262710301
+        references: []
+        parentIds:
+        - cd8a46a0-36c8-46f8-9c84-c8b02f6fbcd6
+        childIds:
+        - 87e2cfbd-fbd5-40b5-b0df-d38fe30e6d68
+        - df27f709-7e07-4905-aae8-8d33bee0ccc5
+      - name: Search For Prey
+        id: 87e2cfbd-fbd5-40b5-b0df-d38fe30e6d68
+        position: {x: -300, y: 600}
+        node:
+          rid: 4394323734262710302
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710303
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - b2117939-0862-439f-a511-3393073d9749
+        childIds: []
+      - name: 
+        id: df27f709-7e07-4905-aae8-8d33bee0ccc5
+        position: {x: 150, y: 600}
+        node:
+          rid: 4394323734262710304
+        references: []
+        parentIds:
+        - b2117939-0862-439f-a511-3393073d9749
+        childIds:
+        - 59e4fa68-9c69-4b46-824c-5a7f9a820d93
+        - 531a9cd0-e8d8-4476-adf5-c54aabc6bc64
+      - name: Eat Prey
+        id: 531a9cd0-e8d8-4476-adf5-c54aabc6bc64
+        position: {x: 300, y: 800}
+        node:
+          rid: 4394323734262710305
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710312
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - df27f709-7e07-4905-aae8-8d33bee0ccc5
+        childIds: []
+      - name: Chase Prey
+        id: 59e4fa68-9c69-4b46-824c-5a7f9a820d93
+        position: {x: 0, y: 800}
+        node:
+          rid: 4394323734262710306
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710311
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - df27f709-7e07-4905-aae8-8d33bee0ccc5
+        childIds: []
+      - name: 
+        id: 3e22b665-e9af-47f9-bd81-a26c03151b6a
+        position: {x: 600, y: 400}
+        node:
+          rid: 4394323734262710307
+        references: []
+        parentIds:
+        - cd8a46a0-36c8-46f8-9c84-c8b02f6fbcd6
+        childIds:
+        - 523465c2-73e1-4ac9-996a-d1698f50708e
+      - name: 
+        id: 523465c2-73e1-4ac9-996a-d1698f50708e
+        position: {x: 600, y: 600}
+        node:
+          rid: 4394323734262710308
+        references: []
+        parentIds:
+        - 3e22b665-e9af-47f9-bd81-a26c03151b6a
+        childIds:
+        - 61908147-02eb-410e-b30a-5eaa4553c269
+      - name: Wander
+        id: 61908147-02eb-410e-b30a-5eaa4553c269
+        position: {x: 600, y: 800}
+        node:
+          rid: 4394323734262710309
+        references:
+        - fieldName: Action
+          value:
+            rid: 4394323734262710310
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 523465c2-73e1-4ac9-996a-d1698f50708e
+        childIds: []
+    - name: Approach Wolf
+      id: 0a95c5ce-a86f-4b2b-a756-7849cbffdc15
+      graph:
+        rid: 4394323734262710313
+      nodes: []
+    pushPerceptions: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4394323734262710272
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710273
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323734262710274
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710275
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710276
+      type: {class: CustomAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        start:
+          componentName: WanderAction
+          methodName: DelayStart
+        update:
+          componentName: WanderAction
+          methodName: DelayUpdate
+        stop:
+          componentName: WanderAction
+          methodName: WanderExit
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 4394323734262710277
+      type: {class: CustomAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        start:
+          componentName: WanderAction
+          methodName: WanderStart
+        update:
+          componentName: WanderAction
+          methodName: WanderUpdate
+        stop:
+          componentName: WanderAction
+          methodName: WanderExit
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 4394323734262710278
+      type: {class: UtilitySystem, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        Inertia: 1.3
+    - rid: 4394323734262710279
+      type: {class: VariableFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        min: 0
+        max: 1
+    - rid: 4394323734262710280
+      type: {class: SerializedContextMethod, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        componentName: SeekPreyAction
+        methodName: IsEating
+    - rid: 4394323734262710281
+      type: {class: LinearCurveFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        Slope: -1
+        YIntercept: 1
+    - rid: 4394323734262710282
+      type: {class: PointedCurveFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        Points:
+        - x: 0
+          y: 0
+        - x: 1
+          y: 0
+        - x: 1
+          y: 1
+    - rid: 4394323734262710283
+      type: {class: ConstantFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        value: 0.99
+    - rid: 4394323734262710284
+      type: {class: ConstantFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        value: 1
+    - rid: 4394323734262710285
+      type: {class: LinearCurveFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        Slope: 1
+        YIntercept: 0
+    - rid: 4394323734262710286
+      type: {class: VariableFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        min: 0
+        max: 90
+    - rid: 4394323734262710287
+      type: {class: SerializedContextMethod, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        componentName: AgentHunger
+        methodName: TimeSinceLastMeal
+    - rid: 4394323734262710288
+      type: {class: MinFusionFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+    - rid: 4394323734262710289
+      type: {class: MinFusionFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+    - rid: 4394323734262710290
+      type: {class: WeightedFusionFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        Weights:
+        - 1
+        - -1
+    - rid: 4394323734262710291
+      type: {class: UtilityAction, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        FinishSystemOnComplete: 0
+    - rid: 4394323734262710292
+      type: {class: UtilityAction, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        FinishSystemOnComplete: 0
+    - rid: 4394323734262710293
+      type: {class: UtilityAction, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
+      data:
+        PullingEnabled: 1
+        FinishSystemOnComplete: 0
+    - rid: 4394323734262710295
+      type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        ExecuteOnLoop: 0
+        InterruptOptions: 2
+        subgraphId: 70943326-a3ee-4e7c-83df-34158aaac978
+    - rid: 4394323734262710296
+      type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        ExecuteOnLoop: 1
+        InterruptOptions: 2
+        subgraphId: 6f37fdd7-8e1d-4a48-9d65-aa4c6373d9d1
+    - rid: 4394323734262710297
+      type: {class: SimpleAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        method:
+          componentName: DeathAction
+          methodName: Die
+    - rid: 4394323734262710298
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710299
+      type: {class: LoopNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        Iterations: -1
+    - rid: 4394323734262710300
+      type: {class: SelectorNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323734262710301
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323734262710302
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710303
+      type: {class: CustomAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        start:
+          componentName: 
+          methodName: 
+        update:
+          componentName: SeekPreyAction
+          methodName: SearchForPreyNearby
+        stop:
+          componentName: 
+          methodName: 
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 4394323734262710304
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 4394323734262710305
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710306
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710307
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710308
+      type: {class: SuccederNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710309
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 4394323734262710310
+      type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        ExecuteOnLoop: 0
+        InterruptOptions: 2
+        subgraphId: 6f37fdd7-8e1d-4a48-9d65-aa4c6373d9d1
+    - rid: 4394323734262710311
+      type: {class: CustomAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        start:
+          componentName: SeekPreyAction
+          methodName: ChasePreyStart
+        update:
+          componentName: SeekPreyAction
+          methodName: ChasePreyUpdate
+        stop:
+          componentName: SeekPreyAction
+          methodName: ChasePreyExit
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 4394323734262710312
+      type: {class: CustomAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        start:
+          componentName: SeekPreyAction
+          methodName: EatPreyStart
+        update:
+          componentName: SeekPreyAction
+          methodName: EatPreyUpdate
+        stop:
+          componentName: SeekPreyAction
+          methodName: SeekPreyExit
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 4394323734262710313
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+--- !u!114 &6792386774302207228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4ba3350b90ce8498bba24e29d67c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  WalkSpeed: 1
+  RunSpeed: 2
+  SeekFoodRange: 60
+  WanderRange: 30
+--- !u!95 &3763275291411466964
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1061612bf0e78b4bb8a932ec5150d24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2102507204791270332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e848292222243ba4c807d14b732c87ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4448637185553925626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288b441991bd4bfb8a48065359d4848f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4218794716321100295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd63235d6376ee34ab860f0b1f1cfcb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7396728099737635583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ab912d8ba60c64188a4e23b66dca59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4471918906693739073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380551784180062164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1528efd2717d81b4b8fbebf1b2538ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthBarOffset: {x: 0, y: 5, z: 0}
   _selectionIndicatorPrefab: {fileID: 8687482825764760039, guid: 383d401abbff32c48b0e9a0eea072f42, type: 3}
   _selectionIndicatorOffset: {x: 0, y: 4, z: 0}
   _healthBarPrefab: {fileID: 674941431926960168, guid: 14011cc4fefd07346900333ef474461c, type: 3}
