@@ -21,7 +21,7 @@ MonoBehaviour:
       nodes:
       - name: 
         id: f3b0f45b-3524-4da5-ab53-5b798a507adb
-        position: {x: 0, y: 0}
+        position: {x: 16, y: 14.399994}
         node:
           rid: 4394323715651010828
         references: []
@@ -47,7 +47,7 @@ MonoBehaviour:
         references:
         - fieldName: Action
           value:
-            rid: -2
+            rid: 3509579712244219905
           fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         parentIds:
@@ -108,6 +108,10 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 3509579712244219905
+      type: {class: DebugLogAction, ns: BehaviourAPI.UnityToolkit, asm: BehaviourAPI.UnityToolkit}
+      data:
+        message: wander...
     - rid: 4394323715651010821
       type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
       data: 

@@ -5,6 +5,8 @@ public class AgentAnimator : MonoBehaviour
     private Animator _animator;
     const string animationPrefix = "AnimalArmature|";
 
+    private string _last;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -12,27 +14,42 @@ public class AgentAnimator : MonoBehaviour
 
     public void SetIdle()
     {
-        _animator.Play(animationPrefix + "Idle");
+        const string key = animationPrefix + "Idle";
+        if(key == _last) return;
+        _last = key;
+        _animator.Play(key);
     }
 
     public void SetWalk()
     {
-        _animator.Play(animationPrefix + "Walk");
+        const string key = animationPrefix + "Walk";
+        if(key == _last) return;
+        _last = key;
+        _animator.Play(key);
     }
 
     public void SetRun()
     {
-        _animator.Play(animationPrefix + "Gallop");
+        const string key = animationPrefix + "Gallop";
+        if(key == _last) return;
+        _last = key;
+        _animator.Play(key);
     }
 
     public void SetEat()
     {
-        _animator.Play(animationPrefix + "Eating");
+        const string key = animationPrefix + "Eating";
+        if(key == _last) return;
+        _last = key;
+        _animator.Play(key);
     }
 
     public void SetDeath()
     {
-        _animator.Play(animationPrefix + "Death");
+        const string key = animationPrefix + "Death";
+        if(key == _last) return;
+        _last = key;
+        _animator.Play(key);
     }
 
 

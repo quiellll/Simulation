@@ -587,7 +587,13 @@ PrefabInstance:
       addedObject: {fileID: 495416170056894063}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 679009772013916990}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4745610563578396014}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7157659976684643688}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 908320142383937548}
@@ -597,9 +603,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4151449423506445926}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7157659976684643688}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4649969098487985759}
@@ -614,13 +617,16 @@ PrefabInstance:
       addedObject: {fileID: 1597405466464077490}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 679009772013916990}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 969155600395901096}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6247740443401021023}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6266731041605556170}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5085867544417683522}
   m_SourcePrefab: {fileID: 100100000, guid: ce9214ee42988c341937c7d6ee325d62, type: 3}
 --- !u!1 &7011388326810552168 stripped
 GameObject:
@@ -698,6 +704,27 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.89
   m_Center: {x: 0, y: 1.91, z: 0.57}
+--- !u!95 &679009772013916990
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011388326810552168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ab788d3b5d47af4ead8988e51b6644f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!195 &4745610563578396014
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -707,7 +734,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7011388326810552168}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.042609792
+  m_Radius: 2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -716,53 +743,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.032843918
+  m_Height: 4.61
   m_BaseOffset: 0.016421959
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &908320142383937548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011388326810552168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81016613ea3feb04b8c61c0b1124211a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  targetThreshold: 1
-  minDistanceToTarget: 0.3
-  drawGizmos: 0
-  targetColor: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &2219127734709018415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011388326810552168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96310e38efad62f45badf4506f8c5d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _runSpeedMultiplier: 2
---- !u!114 &4151449423506445926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011388326810552168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ad4445d95f31c84fbe6fc3e786967b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 100
 --- !u!114 &7157659976684643688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,7 +789,7 @@ MonoBehaviour:
         childIds: []
       - name: Seek Food
         id: 114e2042-1be0-4692-8d42-37764371e910
-        position: {x: 956, y: -91.200005}
+        position: {x: 972, y: -79.200005}
         node:
           rid: 4394323715651010618
         references:
@@ -848,15 +832,15 @@ MonoBehaviour:
         parentIds:
         - 47b02f91-1c2e-4fe1-8174-bf36884389cf
         childIds: []
-      - name: Wander
+      - name: Wander or Follow Leader
         id: 4d440196-ab1d-4e91-9fb9-ec639d74c3e7
-        position: {x: 984.8, y: 170.4}
+        position: {x: 1016, y: 206}
         node:
           rid: 4394323715651010653
         references:
         - fieldName: Action
           value:
-            rid: 4394323715651010665
+            rid: 3509579712244220090
           fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         parentIds: []
@@ -870,7 +854,7 @@ MonoBehaviour:
         references:
         - fieldName: Action
           value:
-            rid: 4394323715651010726
+            rid: 3509579712244220301
           fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         parentIds: []
@@ -878,7 +862,7 @@ MonoBehaviour:
         - 583d5a08-a449-4673-a735-541d499b0d7b
       - name: 
         id: 86b06fe0-33b4-4c84-93ad-e7370592b4a0
-        position: {x: 366.4, y: -280}
+        position: {x: 378, y: -300}
         node:
           rid: 4394323715651010727
         references: []
@@ -942,28 +926,18 @@ MonoBehaviour:
         - 583d5a08-a449-4673-a735-541d499b0d7b
         childIds:
         - 122e755a-7cc1-473d-a81c-80c6476ea438
-    - name: Seek Food
+    - name: Seek Food BT
       id: aeed9376-64e3-49a2-abed-7b12ea2c60fb
       graph:
         rid: 4394323715651010572
       nodes:
-      - name: 
-        id: 6d979adc-3961-435d-9806-66247b3a9215
-        position: {x: 262.5, y: 0}
-        node:
-          rid: 4394323715651010606
-        references: []
-        parentIds: []
-        childIds:
-        - 5eb92cb5-87be-45a5-b1e6-fb2c724e911e
       - name: 
         id: 5eb92cb5-87be-45a5-b1e6-fb2c724e911e
         position: {x: 262.5, y: 200}
         node:
           rid: 4394323715651010597
         references: []
-        parentIds:
-        - 6d979adc-3961-435d-9806-66247b3a9215
+        parentIds: []
         childIds:
         - 64758cea-3bd8-4d06-8320-e6507a5af103
         - 6df1771a-3056-49e4-9555-21ecc72533ce
@@ -1041,7 +1015,7 @@ MonoBehaviour:
         - 5eb92cb5-87be-45a5-b1e6-fb2c724e911e
         childIds:
         - 02444fff-452a-46c7-aee3-a68ce927c583
-      - name: 
+      - name: Wander or Follow Leader
         id: 9280abc3-8de2-4f41-a451-88e4dee767e2
         position: {x: 600, y: 800}
         node:
@@ -1094,7 +1068,7 @@ MonoBehaviour:
         parentIds:
         - 00d23d0b-1a1d-4bd9-9b26-d721a74c59b7
         childIds: []
-      - name: 
+      - name: Random Delay
         id: 71e6a21b-3486-460f-851b-04f7a213a576
         position: {x: -150, y: 400}
         node:
@@ -1108,15 +1082,481 @@ MonoBehaviour:
         parentIds:
         - 00d23d0b-1a1d-4bd9-9b26-d721a74c59b7
         childIds: []
-    - name: Approach Deer BT
+    - name: Seek Same Species BT
       id: 761c0673-0b71-4087-a6d1-0738a8fc6768
       graph:
         rid: 4394323715651010818
-      nodes: []
+      nodes:
+      - name: 
+        id: 8144d316-94e3-4863-b5c6-e1099c792f84
+        position: {x: 0, y: 0}
+        node:
+          rid: 3509579712244219907
+        references: []
+        parentIds: []
+        childIds:
+        - 93cbf1b7-f8a8-4fb4-8e3b-1d512be282a9
+        - 308cc18d-60a8-4ef5-ac3b-3830c103c8bf
+      - name: Near Same Species
+        id: 93cbf1b7-f8a8-4fb4-8e3b-1d512be282a9
+        position: {x: -150, y: 200}
+        node:
+          rid: 3509579712244219908
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 8144d316-94e3-4863-b5c6-e1099c792f84
+        childIds:
+        - b7d4a407-2f35-4d62-a97b-65bf28a396ec
+      - name: Go To Same Species
+        id: b7d4a407-2f35-4d62-a97b-65bf28a396ec
+        position: {x: -150, y: 400}
+        node:
+          rid: 3509579712244219909
+        references:
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 93cbf1b7-f8a8-4fb4-8e3b-1d512be282a9
+        childIds: []
+      - name: 
+        id: 308cc18d-60a8-4ef5-ac3b-3830c103c8bf
+        position: {x: 150, y: 200}
+        node:
+          rid: 3509579712244219910
+        references: []
+        parentIds:
+        - 8144d316-94e3-4863-b5c6-e1099c792f84
+        childIds:
+        - f82031a7-6c95-4163-aa71-bff6a6fb8a0e
+      - name: 
+        id: f82031a7-6c95-4163-aa71-bff6a6fb8a0e
+        position: {x: 150, y: 400}
+        node:
+          rid: 3509579712244219911
+        references: []
+        parentIds:
+        - 308cc18d-60a8-4ef5-ac3b-3830c103c8bf
+        childIds:
+        - fbe18786-c1a1-4783-b890-f875ee6ef90e
+      - name: Wander
+        id: fbe18786-c1a1-4783-b890-f875ee6ef90e
+        position: {x: 150, y: 600}
+        node:
+          rid: 3509579712244219912
+        references:
+        - fieldName: Action
+          value:
+            rid: 3509579712244219913
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - f82031a7-6c95-4163-aa71-bff6a6fb8a0e
+        childIds: []
+    - name: Wander or Follow Leader FSM
+      id: 943a0ff9-4413-434d-8326-bc195f5fa538
+      graph:
+        rid: 3509579712244219962
+      nodes:
+      - name: Simple Wander
+        id: 709c0e49-bb15-414b-9051-9d1c3017f3c3
+        position: {x: -184.8, y: 180.8}
+        node:
+          rid: 3509579712244219963
+        references:
+        - fieldName: Action
+          value:
+            rid: 3509579712244219964
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 9024cf3a-f2fe-4886-96f5-95d484ca371e
+        childIds:
+        - 12d4198d-02d2-4025-ab99-48b84fca7c24
+        - abc67574-d82f-4d0f-82c8-95ca812c47bf
+      - name: Has Leader
+        id: 12d4198d-02d2-4025-ab99-48b84fca7c24
+        position: {x: 212, y: 67.2}
+        node:
+          rid: 3509579712244219966
+        references:
+        - fieldName: Perception
+          value:
+            rid: 3509579712244219967
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 709c0e49-bb15-414b-9051-9d1c3017f3c3
+        childIds:
+        - f194cd67-70d2-4cc6-9dce-04bf41610022
+      - name: Follow Leader
+        id: f194cd67-70d2-4cc6-9dce-04bf41610022
+        position: {x: 530, y: 204}
+        node:
+          rid: 3509579712244220074
+        references:
+        - fieldName: Action
+          value:
+            rid: 3509579712244220087
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 12d4198d-02d2-4025-ab99-48b84fca7c24
+        childIds:
+        - 9024cf3a-f2fe-4886-96f5-95d484ca371e
+        - e1ae93dc-f377-4d77-ac85-2e7293c9b5fe
+      - name: Doesnt have Leader
+        id: 9024cf3a-f2fe-4886-96f5-95d484ca371e
+        position: {x: 196, y: 350}
+        node:
+          rid: 3509579712244220088
+        references:
+        - fieldName: Perception
+          value:
+            rid: 3509579712244220089
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - f194cd67-70d2-4cc6-9dce-04bf41610022
+        childIds:
+        - 709c0e49-bb15-414b-9051-9d1c3017f3c3
+      - name: 
+        id: e1ae93dc-f377-4d77-ac85-2e7293c9b5fe
+        position: {x: 492, y: 607}
+        node:
+          rid: 3509579712244220289
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - f194cd67-70d2-4cc6-9dce-04bf41610022
+        childIds: []
+      - name: 
+        id: abc67574-d82f-4d0f-82c8-95ca812c47bf
+        position: {x: -159, y: 558}
+        node:
+          rid: 3509579712244220291
+        references:
+        - fieldName: Perception
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        - fieldName: Action
+          value:
+            rid: -2
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 709c0e49-bb15-414b-9051-9d1c3017f3c3
+        childIds: []
+    - name: Follow Leader BT
+      id: beeced73-57e3-4279-9c8d-26cdfb05a312
+      graph:
+        rid: 3509579712244220292
+      nodes:
+      - name: 
+        id: 640ecae4-08b4-49fd-837f-13bddde6431a
+        position: {x: 75, y: 0}
+        node:
+          rid: 3509579712244220293
+        references: []
+        parentIds: []
+        childIds:
+        - 960ffb3c-cd73-43a9-a0e0-a2216fc0c7c4
+        - e96a661b-0867-407d-8802-5488fe4ea870
+      - name: Has To Follow Leader?
+        id: 960ffb3c-cd73-43a9-a0e0-a2216fc0c7c4
+        position: {x: -150, y: 200}
+        node:
+          rid: 3509579712244220294
+        references:
+        - fieldName: Perception
+          value:
+            rid: 3509579712244220300
+          fieldType: BehaviourAPI.Core.Perceptions.Perception, BehaviourAPI.Core,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 640ecae4-08b4-49fd-837f-13bddde6431a
+        childIds:
+        - 2fa658ab-f1e5-47e9-8945-f05d8715f9ec
+      - name: Follow Leader
+        id: 2fa658ab-f1e5-47e9-8945-f05d8715f9ec
+        position: {x: -150, y: 400}
+        node:
+          rid: 3509579712244220295
+        references:
+        - fieldName: Action
+          value:
+            rid: 3509579712244220296
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - 960ffb3c-cd73-43a9-a0e0-a2216fc0c7c4
+        childIds: []
+      - name: Idle
+        id: 23ac85a2-9a11-4c33-a9db-be2fd179a716
+        position: {x: 150, y: 400}
+        node:
+          rid: 3509579712244220297
+        references:
+        - fieldName: Action
+          value:
+            rid: 3509579712244220434
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - e96a661b-0867-407d-8802-5488fe4ea870
+        childIds: []
+      - name: 
+        id: e96a661b-0867-407d-8802-5488fe4ea870
+        position: {x: 300, y: 200}
+        node:
+          rid: 3509579712244220435
+        references: []
+        parentIds:
+        - 640ecae4-08b4-49fd-837f-13bddde6431a
+        childIds:
+        - 23ac85a2-9a11-4c33-a9db-be2fd179a716
+        - 82fc2ddb-bafd-49e8-9b93-a69eb06956b6
+      - name: 
+        id: 82fc2ddb-bafd-49e8-9b93-a69eb06956b6
+        position: {x: 450, y: 400}
+        node:
+          rid: 3509579712244220436
+        references:
+        - fieldName: Action
+          value:
+            rid: 3509579712244220437
+          fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        parentIds:
+        - e96a661b-0867-407d-8802-5488fe4ea870
+        childIds: []
     pushPerceptions: []
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3509579712244219907
+      type: {class: SelectorNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 3509579712244219908
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244219909
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244219910
+      type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244219911
+      type: {class: SuccederNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244219912
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244219913
+      type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        ExecuteOnLoop: 0
+        InterruptOptions: 2
+        subgraphId: 98756982-476a-44cd-b8e9-92ceee185ce5
+    - rid: 3509579712244219962
+      type: {class: FSM, ns: BehaviourAPI.StateMachines, asm: BehaviourAPI.StateMachines}
+      data: 
+    - rid: 3509579712244219963
+      type: {class: State, ns: BehaviourAPI.StateMachines, asm: BehaviourAPI.StateMachines}
+      data: 
+    - rid: 3509579712244219964
+      type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        ExecuteOnLoop: 0
+        InterruptOptions: 2
+        subgraphId: 98756982-476a-44cd-b8e9-92ceee185ce5
+    - rid: 3509579712244219966
+      type: {class: StateTransition, ns: BehaviourAPI.StateMachines, asm: BehaviourAPI.StateMachines}
+      data:
+        StatusFlags: 7
+    - rid: 3509579712244219967
+      type: {class: CustomPerception, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        init:
+          componentName: 
+          methodName: 
+        check:
+          componentName: AgentSocial
+          methodName: HasLeader
+        reset:
+          componentName: 
+          methodName: 
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 3509579712244220074
+      type: {class: State, ns: BehaviourAPI.StateMachines, asm: BehaviourAPI.StateMachines}
+      data: 
+    - rid: 3509579712244220087
+      type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        ExecuteOnLoop: 0
+        InterruptOptions: 2
+        subgraphId: beeced73-57e3-4279-9c8d-26cdfb05a312
+    - rid: 3509579712244220088
+      type: {class: StateTransition, ns: BehaviourAPI.StateMachines, asm: BehaviourAPI.StateMachines}
+      data:
+        StatusFlags: 7
+    - rid: 3509579712244220089
+      type: {class: CustomPerception, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        init:
+          componentName: 
+          methodName: 
+        check:
+          componentName: AgentSocial
+          methodName: IsAlpha
+        reset:
+          componentName: 
+          methodName: 
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 3509579712244220090
+      type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        ExecuteOnLoop: 1
+        InterruptOptions: 2
+        subgraphId: 943a0ff9-4413-434d-8326-bc195f5fa538
+    - rid: 3509579712244220289
+      type: {class: ExitTransition, ns: BehaviourAPI.StateMachines, asm: BehaviourAPI.StateMachines}
+      data:
+        StatusFlags: 6
+        ExitStatus: 2
+    - rid: 3509579712244220291
+      type: {class: ExitTransition, ns: BehaviourAPI.StateMachines, asm: BehaviourAPI.StateMachines}
+      data:
+        StatusFlags: 6
+        ExitStatus: 2
+    - rid: 3509579712244220292
+      type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244220293
+      type: {class: SelectorNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 3509579712244220294
+      type: {class: ConditionNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244220295
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244220296
+      type: {class: CustomAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        start:
+          componentName: WanderAction
+          methodName: FollowLeaderStart
+        update:
+          componentName: WanderAction
+          methodName: FollowLeaderUpdate
+        stop:
+          componentName: WanderAction
+          methodName: FollowLeaderExit
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 3509579712244220297
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244220300
+      type: {class: CustomPerception, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        init:
+          componentName: 
+          methodName: 
+        check:
+          componentName: WanderAction
+          methodName: HasToFollowLeader
+        reset:
+          componentName: 
+          methodName: 
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 3509579712244220301
+      type: {class: CustomAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        start:
+          componentName: DeathAction
+          methodName: Die
+        update:
+          componentName: 
+          methodName: 
+        stop:
+          componentName: 
+          methodName: 
+        pause:
+          componentName: 
+          methodName: 
+        unpause:
+          componentName: 
+          methodName: 
+    - rid: 3509579712244220434
+      type: {class: SimpleAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
+      data:
+        method:
+          componentName: WanderAction
+          methodName: Idle
+    - rid: 3509579712244220435
+      type: {class: SequencerNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data:
+        IsRandomized: 0
+    - rid: 3509579712244220436
+      type: {class: LeafNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
+      data: 
+    - rid: 3509579712244220437
+      type: {class: DelayAction, ns: BehaviourAPI.UnityToolkit, asm: BehaviourAPI.UnityToolkit}
+      data:
+        delayTime: 1
     - rid: 4394323715651010572
       type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
       data: 
@@ -1198,10 +1638,6 @@ MonoBehaviour:
     - rid: 4394323715651010605
       type: {class: InverterNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
       data: 
-    - rid: 4394323715651010606
-      type: {class: LoopNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
-      data:
-        Iterations: -1
     - rid: 4394323715651010607
       type: {class: UtilitySystem, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
       data:
@@ -1225,7 +1661,7 @@ MonoBehaviour:
     - rid: 4394323715651010619
       type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
       data:
-        ExecuteOnLoop: 0
+        ExecuteOnLoop: 1
         InterruptOptions: 2
         subgraphId: aeed9376-64e3-49a2-abed-7b12ea2c60fb
     - rid: 4394323715651010621
@@ -1275,23 +1711,11 @@ MonoBehaviour:
         unpause:
           componentName: 
           methodName: 
-    - rid: 4394323715651010665
-      type: {class: SubgraphAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
-      data:
-        ExecuteOnLoop: 1
-        InterruptOptions: 2
-        subgraphId: 98756982-476a-44cd-b8e9-92ceee185ce5
     - rid: 4394323715651010722
       type: {class: UtilityAction, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
       data:
         PullingEnabled: 1
         FinishSystemOnComplete: 0
-    - rid: 4394323715651010726
-      type: {class: SimpleAction, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
-      data:
-        method:
-          componentName: DeathAction
-          methodName: Die
     - rid: 4394323715651010727
       type: {class: PointedCurveFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
       data:
@@ -1345,7 +1769,7 @@ MonoBehaviour:
       data:
         ExecuteOnLoop: 0
         InterruptOptions: 2
-        subgraphId: 98756982-476a-44cd-b8e9-92ceee185ce5
+        subgraphId: 943a0ff9-4413-434d-8326-bc195f5fa538
     - rid: 4394323715651010741
       type: {class: SuccederNode, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
       data: 
@@ -1373,6 +1797,48 @@ MonoBehaviour:
     - rid: 4394323715651010818
       type: {class: BehaviourTree, ns: BehaviourAPI.BehaviourTrees, asm: BehaviourAPI.BehaviourTrees}
       data: 
+--- !u!114 &908320142383937548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011388326810552168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81016613ea3feb04b8c61c0b1124211a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  targetThreshold: 1
+  minDistanceToTarget: 0.3
+  drawGizmos: 0
+  targetColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &2219127734709018415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011388326810552168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96310e38efad62f45badf4506f8c5d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4151449423506445926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011388326810552168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad4445d95f31c84fbe6fc3e786967b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
 --- !u!114 &4649969098487985759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1398,10 +1864,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 10
-  WalkSpeed: 1
-  RunSpeed: 2
+  WalkSpeed: 3.5
+  RunSpeed: 7
   SeekFoodRange: 50
   WanderRange: 40
+  CloseToLeaderRange: 10
+  LeaderMoveThreshold: 5
+  SeekSameSpeciesRange: 50
 --- !u!114 &6617899994835103558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,27 +1896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd63235d6376ee34ab860f0b1f1cfcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &679009772013916990
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011388326810552168}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3ab788d3b5d47af4ead8988e51b6644f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &969155600395901096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,3 +1920,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ab912d8ba60c64188a4e23b66dca59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6266731041605556170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011388326810552168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1528efd2717d81b4b8fbebf1b2538ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthBarOffset: {x: 0, y: 6, z: 0}
+  _selectionIndicatorPrefab: {fileID: 8687482825764760039, guid: 383d401abbff32c48b0e9a0eea072f42, type: 3}
+  _selectionIndicatorOffset: {x: 0, y: 4, z: 0}
+  _healthBarPrefab: {fileID: 674941431926960168, guid: 14011cc4fefd07346900333ef474461c, type: 3}
+--- !u!114 &5085867544417683522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011388326810552168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b5f53530486d74f84c16c4cf6e3a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _alphaMat: {fileID: 2100000, guid: 9441c2d8ead40a24ca355893a61cd64d, type: 2}

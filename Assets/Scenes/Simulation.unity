@@ -1070,14 +1070,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deer
       objectReference: {fileID: 0}
-    - target: {fileID: 7157659976684643688, guid: b5c69ecddacbc0e44ae387d1368a4d93, type: 3}
-      propertyPath: data.graphs.Array.data[0].nodes.Array.data[7].position.x
-      value: 382
-      objectReference: {fileID: 0}
-    - target: {fileID: 7157659976684643688, guid: b5c69ecddacbc0e44ae387d1368a4d93, type: 3}
-      propertyPath: data.graphs.Array.data[0].nodes.Array.data[7].position.y
-      value: -269
-      objectReference: {fileID: 0}
     - target: {fileID: 7639974299174788562, guid: b5c69ecddacbc0e44ae387d1368a4d93, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.484398
@@ -1121,10 +1113,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7011388326810552168, guid: b5c69ecddacbc0e44ae387d1368a4d93, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1422841356}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5c69ecddacbc0e44ae387d1368a4d93, type: 3}
 --- !u!1 &653637575
 GameObject:
@@ -3795,27 +3784,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376925092}
   m_CullTransparentMesh: 1
---- !u!1 &1422841328 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7011388326810552168, guid: b5c69ecddacbc0e44ae387d1368a4d93, type: 3}
-  m_PrefabInstance: {fileID: 637266049}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1422841356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422841328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1528efd2717d81b4b8fbebf1b2538ded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthBarOffset: {x: 0, y: 6, z: 0}
-  _selectionIndicatorPrefab: {fileID: 8687482825764760039, guid: 383d401abbff32c48b0e9a0eea072f42, type: 3}
-  _selectionIndicatorOffset: {x: 0, y: 4, z: 0}
-  _healthBarPrefab: {fileID: 674941431926960168, guid: 14011cc4fefd07346900333ef474461c, type: 3}
 --- !u!1 &1457812706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4653,6 +4621,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1840709075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840709077}
+  - component: {fileID: 1840709076}
+  m_Layer: 0
+  m_Name: Species Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1840709076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840709075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb12550855240d0a5e586fb24b7e67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1840709077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840709075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881572441
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,3 +5466,4 @@ SceneRoots:
   - {fileID: 2143293828}
   - {fileID: 1828574307}
   - {fileID: 875114501}
+  - {fileID: 1840709077}

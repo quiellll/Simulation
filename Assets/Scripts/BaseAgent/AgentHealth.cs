@@ -31,6 +31,8 @@ public class AgentHealth : MonoBehaviour
         OnHealthChanged?.Invoke(_currentHealth);
     }
 
+    public void Kill() => TakeDamage(_currentHealth);
+
     public float GetHealthPercentage()
     {
         return _currentHealth / _maxHealth;

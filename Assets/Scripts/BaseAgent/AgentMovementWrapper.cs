@@ -4,28 +4,26 @@ using BehaviourAPI.UnityToolkit;
 
 public class AgentMovementWrapper : MonoBehaviour
 {
-    [SerializeField] private float _runSpeedMultiplier = 2f;
     private AgentAnimator _agentAnimator;
-
-    private float _walkSpeed;
+    private AgentInfo _info;
     public NavmeshAgentMovement NavMeshAgentMovement {get; private set;}
 
     public void Start()
     {
         NavMeshAgentMovement = GetComponent<NavmeshAgentMovement>();
         _agentAnimator = GetComponent<AgentAnimator>();
-        _walkSpeed = NavMeshAgentMovement.Speed;
+        _info = GetComponent<AgentInfo>();
     }
 
     public void Run()
     {
-        NavMeshAgentMovement.Speed = _walkSpeed * _runSpeedMultiplier;
+        NavMeshAgentMovement.Speed = _info.RunSpeed;
         _agentAnimator.SetRun();
     }
 
     public void Walk()
     {
-        NavMeshAgentMovement.Speed = _walkSpeed;
+        NavMeshAgentMovement.Speed = _info.WalkSpeed;
         _agentAnimator.SetWalk();
     }
 
