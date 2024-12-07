@@ -37,6 +37,11 @@ namespace BehaviourAPI.UnityToolkit
             m_NavMeshAgent.SetDestination(targetPos);
         }
 
+        public bool IsMoving()
+        {
+            return m_NavMeshAgent.velocity.sqrMagnitude >= 0.01f;// && m_NavMeshAgent.pathPending;
+        }
+
         public bool HasArrived()
         {
             if (Vector3.Distance(transform.position, m_NavMeshAgent.destination) < minDistanceToTarget)

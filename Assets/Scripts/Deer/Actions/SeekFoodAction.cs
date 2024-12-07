@@ -52,7 +52,7 @@ public class SeekFoodAction : MonoBehaviour
             _movement.NavMeshAgentMovement.CancelMove();
             return Status.Failure;
         }
-        if (Vector3.Distance(transform.position, _selectedFood.transform.position) < 3f)
+        if (Vector3.Distance(transform.position, _selectedFood.transform.position) < 5f)
         {
             _movement.NavMeshAgentMovement.CancelMove();
             return Status.Success;

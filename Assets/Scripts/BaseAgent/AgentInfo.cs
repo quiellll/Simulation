@@ -9,6 +9,9 @@ public class AgentInfo : MonoBehaviour
     public float RunSpeed;
     public float SeekFoodRange;
     public float WanderRange;
+    public float CloseToLeaderRange;
+    public float LeaderMoveThreshold;
+    public float SeekSameSpeciesRange;
 
     public void OnDrawGizmos()
     {
