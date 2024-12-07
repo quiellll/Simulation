@@ -27,4 +27,9 @@ public class AgentMovementWrapper : MonoBehaviour
         _agentAnimator.SetWalk();
     }
 
+    public void LookAt(Vector3 target)
+    {
+        transform.LookAt(target);
+    }
+
 }

@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 8333558907772035968}
   - component: {fileID: 8799686753993035780}
   m_Layer: 0
-  m_Name: Hunger Bar Canvas
+  m_Name: Stat  Bar Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

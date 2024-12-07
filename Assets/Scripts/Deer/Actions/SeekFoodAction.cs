@@ -28,7 +28,6 @@ public class SeekFoodAction : MonoBehaviour
 
     public Status SearchForFoodNearby()
     {
-        Debug.Log("Searching for food");
 
         return FoodManager.Instance.TryGetFood(transform.position, out _selectedFood, _info.SeekFoodRange) 
             ? Status.Success

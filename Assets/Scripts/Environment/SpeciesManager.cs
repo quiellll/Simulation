@@ -8,6 +8,10 @@ public class SpeciesManager : MonoBehaviour
     public static SpeciesManager Instance { get; private set; }
 
     private readonly List<DeerBehaviourRunner> _deer = new();
+
+    private List<AgentSocial> _deerMatingQueue = new();
+    
+    // public bool IsDirty { get; private set; }
     
     public void Awake()
     {
@@ -61,6 +65,35 @@ public class SpeciesManager : MonoBehaviour
         return orderedSS is not null && orderedSS.Count > 0;
     }
 
+    public void RegisterToMate(AgentSocial agentSocial)
+    {
+        if (agentSocial.TryGetComponent<DeerBehaviourRunner>(out var _))
+        {
+            for (int i = 0; i < _deerMatingQueue.Count; i++)
+            {
+                var other = _deerMatingQueue[i];
+
+                if (agentSocial.GetGroupAlpha() == other.GetGroupAlpha())
+                {
+                    //match found
+                    _deerMatingQueue.RemoveAt(i);
+                    bool authority = Random.Range(0f, 1f) >= 0.5f;
+                    agentSocial.AssignPartner(other, authority);
+                    other.AssignPartner(agentSocial, !authority);
+                    return;
+                }
+            }
+            
+            _deerMatingQueue.Add(agentSocial);
+        }
+    }
+
+    public void CheckOutFromMate(AgentSocial agentSocial)
+    {
+        _deerMatingQueue.Remove(agentSocial);
+    }
+    
+
     public List<AgentHealth> GetPreyList()
     {
         return _deer.Select(d => d.GetComponent<AgentHealth>()).ToList();
@@ -88,7 +121,7 @@ public class SpeciesManager : MonoBehaviour
             {
                 var social = deer.GetComponent<AgentSocial>();
                 if (!social.HasLeader())
-                    social.FindLeader();
+                    social.FindAndSetLeader();
 
             }
         }
