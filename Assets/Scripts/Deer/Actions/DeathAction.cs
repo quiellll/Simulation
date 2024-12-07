@@ -1,3 +1,4 @@
+using BehaviourAPI.UnityToolkit.GUIDesigner.Runtime;
 using UnityEngine;
 
 public class DeathAction : MonoBehaviour
@@ -13,8 +14,10 @@ public class DeathAction : MonoBehaviour
 
     public void Die()
     {
+        GetComponent<AgentMovementWrapper>().NavMeshAgentMovement.CancelMove();
+        Destroy(GetComponent<EditorBehaviourRunner>());
         _health.Kill();
         _agentAnimator.SetDeath();
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 2.5f);
     }
 }

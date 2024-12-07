@@ -7,7 +7,6 @@ public class FoodManager : MonoBehaviour
     public static FoodManager Instance { get; private set; }
 
     private List<Food> _foods = new();
-    private List<Prey> _preys = new();
     private HashSet<Food> _assignedFoods = new();
 
     public void Awake()
@@ -26,11 +25,7 @@ public class FoodManager : MonoBehaviour
     {
         _foods.Add(food);
     }
-
-    public void RegisterPrey(Prey prey)
-    {
-        _preys.Add(prey);
-    }
+    
 
     public bool TryGetFood(Vector3 position, out Food food, float maxRange)
     {
@@ -63,11 +58,11 @@ public class FoodManager : MonoBehaviour
         return food != null;
     }
 
-    public bool TryGetPrey(Vector3 position, out Prey prey, float maxRange)
+    public bool TryGetPrey(Vector3 position, out AgentHealth prey, float maxRange)
     {
         prey = null;
         float nearestDistance = float.MaxValue;
-        foreach (var p in _preys)
+        foreach (var p in SpeciesManager.Instance.GetPreyList())
         {
             if(p == null || !p.gameObject.activeSelf) continue;
             float distance = Vector3.Distance(p.transform.position, position);

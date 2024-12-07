@@ -18,6 +18,8 @@ public class AgentHealth : MonoBehaviour
     {
         return _currentHealth <= 0;
     }
+    
+    public float IsDeadInt() => IsDead() ? 1 : 0;
 
     public void TakeDamage(float damage)
     {

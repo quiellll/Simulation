@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AgentInfo : MonoBehaviour
 {
-    public int MaxHealth;
+    public int MaxHunger;
     public float WalkSpeed;
     public float RunSpeed;
     public float SeekFoodRange;

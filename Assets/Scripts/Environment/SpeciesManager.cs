@@ -60,6 +60,24 @@ public class SpeciesManager : MonoBehaviour
 
         return orderedSS is not null && orderedSS.Count > 0;
     }
+
+    public List<AgentHealth> GetPreyList()
+    {
+        return _deer.Select(d => d.GetComponent<AgentHealth>()).ToList();
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     private void OnGUI()
     {
