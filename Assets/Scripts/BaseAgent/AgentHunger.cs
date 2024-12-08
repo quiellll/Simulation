@@ -35,5 +35,14 @@ public class AgentHunger : MonoBehaviour
         _timeSinceLastMeal = 0;
     }
 
+    public void IncreaseHunger()
+    {
+        _timeSinceLastMeal += 10;
+    }
+
+    public void DecreaseHunger()
+    {
+        _timeSinceLastMeal -= 10;
+    }
 
 }

@@ -12,7 +12,6 @@ public class AgentUI : MonoBehaviour
     [SerializeField] private Vector3 _selectionIndicatorOffset = new Vector3(0, 0.1f, 0); // Slight offset above ground
 
     private GameObject _selectionIndicator;
-    private bool _isSelected;
     private UIManager _uiManager;
     private Camera _mainCamera;
 
@@ -71,21 +70,9 @@ public class AgentUI : MonoBehaviour
 
     private void UpdateSelectionIndicator()
     {
-        if (_selectionIndicator != null && _selectionIndicator.activeSelf)
+        if (_selectionIndicator is not null && _selectionIndicator.activeSelf)
         {
             _selectionIndicator.transform.Rotate(Vector3.up, 90f * Time.deltaTime);
-        }
-    }
-
-    public void ToggleSelectionIndicator()
-    {
-        if (_selectionIndicator != null)
-        {
-            _selectionIndicator.SetActive(!_selectionIndicator.activeSelf);
-        }
-        else
-        {
-            Debug.Log($"Selection indicator is null on {gameObject.name}"); // Debug missing indicator
         }
     }
 
@@ -94,23 +81,5 @@ public class AgentUI : MonoBehaviour
         _uiManager.OnEntitySelected(this);
     }
 
-    public void SetSelected(bool selected)
-    {
-        _isSelected = selected;
-        Debug.Log($"SetSelected called on {gameObject.name} with value: {selected}"); // Debug selection state
-
-        if (_selectionIndicator != null)
-        {
-            Debug.Log($"Selection indicator exists, setting active to: {selected}"); // Debug indicator
-            _selectionIndicator.SetActive(selected);
-        }
-        else
-        {
-            Debug.LogWarning("Selection indicator is null!"); // Debug missing indicator
-        }
-    }
-
-    private void OnDestroy()
-    {
-    }
+    public void SetSelected(bool selected) => _selectionIndicator?.SetActive(selected);
 }
