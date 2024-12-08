@@ -86,7 +86,7 @@ public class MateAction : MonoBehaviour
     {
         _movement.NavMeshAgentMovement.CancelMove();
         _animator.SetIdle();
-        _social.RemovePartner();
+        if(_social.HasPartner()) _social.RemovePartner();
     }
 
     public void MateStart()
@@ -102,7 +102,7 @@ public class MateAction : MonoBehaviour
         GetComponent<AgentReproduction>().ResetReproduction();
         if (!_social.IsCoupleAuthority()) return Status.Success;
 
-        var newBorn = Instantiate(_info.GetPrefab(this), transform.position, Quaternion.identity);
+        var newBorn = Instantiate(_info.Prefab, transform.position, Quaternion.identity);
         newBorn.GetComponent<AgentSocial>().SetLeader(_social);
         newBorn.GetComponent<AgentGrowth>().InitAsChild();
         return Status.Success;

@@ -6,7 +6,7 @@ using UnityEngine;
 public class AgentSocial : MonoBehaviour
 {
     [SerializeField] private Material _alphaMat;
-
+    [SerializeField] private int _alphaMatIndex = 1;
     private AgentHealth _health;
     private AgentInfo _info;
 
@@ -40,7 +40,7 @@ public class AgentSocial : MonoBehaviour
         _info = GetComponent<AgentInfo>();
         _health = GetComponent<AgentHealth>();
         _health.OnHealthChanged += OnHealthChanged;
-        _defaultMat = GetComponentInChildren<SkinnedMeshRenderer>().materials[1];
+        _defaultMat = GetComponentInChildren<SkinnedMeshRenderer>().materials[_alphaMatIndex];
         if(IsAlpha()) SetMaterial(_alphaMat);
     }
 
@@ -54,7 +54,7 @@ public class AgentSocial : MonoBehaviour
         var smr = GetComponentInChildren<SkinnedMeshRenderer>();
         var mats = new List<Material>(smr.materials)
         {
-            [1] = mat
+            [_alphaMatIndex] = mat
         };
         smr.SetMaterials(mats);
     }
@@ -81,25 +81,7 @@ public class AgentSocial : MonoBehaviour
 
         return alpha;
     }
-
-    // public bool IsSuperiorOf(AgentSocial other) //comprueba si other esta en la lista de subordinados
-    // {
-    //     Queue<AgentSocial> queue = new Queue<AgentSocial>(_subordinates);
-    //
-    //     while (queue.TryPeek(out var subordinate))
-    //     {
-    //         queue.Dequeue();
-    //
-    //         if (subordinate == other)
-    //             return true;
-    //
-    //         foreach (var s in subordinate._subordinates)
-    //             queue.Enqueue(s);
-    //     }
-    //
-    //     return false;
-    // }
-
+    
     public void SetLeader(AgentSocial leader)
     {
         if (leader is null) throw new Exception("bro leader no puede ser null hazlo con otra funcion eso");
@@ -114,13 +96,23 @@ public class AgentSocial : MonoBehaviour
 
     public void RemoveLeader()
     {
-        if (_leader is null) throw new Exception("bro no puedes remove leader si no tiene leader!");
+        if (_leader is null)
+            return;
 
         // _leader._subordinates.Remove(this);
-        _leader.GetComponent<AgentHealth>().OnHealthChanged -= OnLeaderHealthChange;
-        _leader._subCount--;
         _leader = null;
         SetMaterial(_alphaMat);
+
+        try
+        {
+
+            _leader.GetComponent<AgentHealth>().OnHealthChanged -= OnLeaderHealthChange;
+            _leader._subCount--;
+        }
+        catch
+        {
+            Debug.LogWarning("Estas quitando el lider ya destruido, eso esta regular pero bueno es la que hay");
+        }
     }
     
 
@@ -199,7 +191,10 @@ public class AgentSocial : MonoBehaviour
 
         var leaderHealth = _leader.GetComponent<AgentHealth>();
         if (leaderHealth.IsDead())
+        {
+            Debug.Log("quitando lider porque se murio...");
             RemoveLeader();
+        }
     }
 
     private void OnPartnerHealthChange(float _)
@@ -212,10 +207,6 @@ public class AgentSocial : MonoBehaviour
             RemovePartner();
     }
     
-    
-    
-
-    private static AgentSocial a = null;
     private void OnDrawGizmos()
     {
         if (!HasLeader()) return;

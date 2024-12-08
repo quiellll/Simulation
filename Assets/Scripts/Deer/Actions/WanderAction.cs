@@ -75,7 +75,6 @@ public class WanderAction : MonoBehaviour
 
     public void FollowLeaderStart()
     {
-        Debug.Log("flstart");
         _leaderTransform = _social.GetLeader().transform;
         _leaderPos = _leaderTransform.position;
         _movement.Walk();
@@ -84,9 +83,17 @@ public class WanderAction : MonoBehaviour
 
     public Status FollowLeaderUpdate()
     {
-        if (_leaderTransform is null || !_social.HasLeader() || _social.GetLeader().transform != _leaderTransform)
+        try
         {
-            _movement.NavMeshAgentMovement.CancelMove();
+            if (_leaderTransform is null || !_social.HasLeader() || _social.GetLeader().transform != _leaderTransform)
+            {
+                _movement.NavMeshAgentMovement.CancelMove();
+                return Status.Failure;
+            }
+        }
+        catch
+        {
+            Debug.LogWarning("El lider esta destruido");
             return Status.Failure;
         }
 
@@ -117,9 +124,18 @@ public class WanderAction : MonoBehaviour
 
     public bool IsLeaderMoving()
     {
-        var leader = _social.GetLeader();
-        return leader is not null && 
-               leader.GetComponent<AgentMovementWrapper>().NavMeshAgentMovement.IsMoving();
+        try
+        {
+            if (!_social.HasLeader()) return false;
+
+            var leader = _social.GetLeader();
+            return leader is not null &&
+                   leader.GetComponent<AgentMovementWrapper>().NavMeshAgentMovement.IsMoving();
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     public bool IsLeaderStill() => !IsLeaderMoving();
@@ -131,12 +147,6 @@ public class WanderAction : MonoBehaviour
         if (leader is null) return false;
         
         return Vector3.Distance(transform.position, leader.transform.position) > _info.CloseToLeaderRange;
-    }
-
-    public bool DoesntHaveToFollowLeader()
-    {
-        Debug.LogWarning("hola no se deberia llamar esta funcion");
-        return true;
     }
 
 }

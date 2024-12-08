@@ -18,16 +18,7 @@ public class AgentInfo : MonoBehaviour
     public float ChildGrowthTime;
     public float MatingTime;
 
-    [SerializeField] private GameObject _deerPrefab;
-
-
-    public GameObject GetPrefab(Component c)
-    {
-        if(c.TryGetComponent<DeerBehaviourRunner>(out var _))
-            return _deerPrefab;
-
-        return null;
-    }
+    public GameObject Prefab;
     
     
     private void OnDrawGizmos()

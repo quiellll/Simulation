@@ -1272,7 +1272,7 @@ MonoBehaviour:
         - e582e8f0-417f-41b3-a821-b65d121e4195
       - name: Time since Last Mating
         id: 38b431d7-dd1e-499e-b251-d271a7dfccda
-        position: {x: 16, y: 514}
+        position: {x: 32, y: 528}
         node:
           rid: 3509579712244220438
         references:
@@ -1320,7 +1320,7 @@ MonoBehaviour:
         - 38b431d7-dd1e-499e-b251-d271a7dfccda
       - name: FEW HUNG AND FEW REPRO
         id: b3702cb9-7710-48e1-8006-abaa0dcf639f
-        position: {x: 734, y: 386}
+        position: {x: 849.6, y: 380.8}
         node:
           rid: 3509579712244220443
         references: []
@@ -1356,7 +1356,7 @@ MonoBehaviour:
         - 51dc99c3-d8de-4dec-b253-ec68561701bf
       - name: Is in Group
         id: 95da5c08-9294-47c6-b550-d701764df30b
-        position: {x: 32, y: 1135}
+        position: {x: 48, y: 1149.6}
         node:
           rid: 3509579712244220532
         references:
@@ -1667,7 +1667,7 @@ MonoBehaviour:
         - 9aef4f64-5c3e-48d3-a5a2-cbf3b330db2e
         childIds:
         - a02e2c6a-454b-4c63-aafd-7afcab7f54d1
-      - name: 
+      - name: Wander or Follow Leader
         id: a02e2c6a-454b-4c63-aafd-7afcab7f54d1
         position: {x: 300, y: 600}
         node:
@@ -1715,7 +1715,7 @@ MonoBehaviour:
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         - fieldName: Action
           value:
-            rid: 3509579720535310336
+            rid: -2
           fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         parentIds:
@@ -1740,7 +1740,7 @@ MonoBehaviour:
         - e1ae93dc-f377-4d77-ac85-2e7293c9b5fe
       - name: Doesnt have Leader
         id: 9024cf3a-f2fe-4886-96f5-95d484ca371e
-        position: {x: 196, y: 350}
+        position: {x: 228, y: 376}
         node:
           rid: 3509579712244220088
         references:
@@ -1751,7 +1751,7 @@ MonoBehaviour:
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         - fieldName: Action
           value:
-            rid: 3509579720535310337
+            rid: -2
           fieldType: BehaviourAPI.Core.Actions.Action, BehaviourAPI.Core, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
         parentIds:
@@ -2140,7 +2140,7 @@ MonoBehaviour:
       data:
         PullingEnabled: 1
         min: 0
-        max: 120
+        max: 50
     - rid: 3509579712244220439
       type: {class: SerializedContextMethod, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
       data:
@@ -2370,14 +2370,6 @@ MonoBehaviour:
         unpause:
           componentName: 
           methodName: 
-    - rid: 3509579720535310336
-      type: {class: DebugLogAction, ns: BehaviourAPI.UnityToolkit, asm: BehaviourAPI.UnityToolkit}
-      data:
-        message: tiene lider! transicionando
-    - rid: 3509579720535310337
-      type: {class: DebugLogAction, ns: BehaviourAPI.UnityToolkit, asm: BehaviourAPI.UnityToolkit}
-      data:
-        message: NO tiene lider! transicionando
     - rid: 3509579720535310338
       type: {class: LinearCurveFactor, ns: BehaviourAPI.UtilitySystems, asm: BehaviourAPI.UtilitySystems}
       data:
@@ -2507,7 +2499,7 @@ MonoBehaviour:
       data:
         PullingEnabled: 1
         min: 0
-        max: 90
+        max: 60
     - rid: 4394323715651010612
       type: {class: SerializedContextMethod, ns: BehaviourAPI.UnityToolkit.GUIDesigner.Framework, asm: BehaviourAPI.UnityToolkit.GUIDesigner.Framework}
       data:
@@ -2755,8 +2747,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4ba3350b90ce8498bba24e29d67c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHunger: 90
-  MaxReproduction: 120
+  MaxHunger: 60
+  MaxReproduction: 50
   WalkSpeed: 3.5
   RunSpeed: 7
   SeekFoodRange: 50
@@ -2768,7 +2760,7 @@ MonoBehaviour:
   ChildScale: 0.2
   ChildGrowthTime: 30
   MatingTime: 3
-  _deerPrefab: {fileID: 7011388326810552168}
+  Prefab: {fileID: 7011388326810552168}
 --- !u!114 &6617899994835103558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2848,6 +2840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _alphaMat: {fileID: 2100000, guid: 9441c2d8ead40a24ca355893a61cd64d, type: 2}
+  _alphaMatIndex: 1
 --- !u!114 &9017192888830361850
 MonoBehaviour:
   m_ObjectHideFlags: 0

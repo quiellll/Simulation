@@ -7,9 +7,11 @@ public class SpeciesManager : MonoBehaviour
 {
     public static SpeciesManager Instance { get; private set; }
 
-    private readonly List<DeerBehaviourRunner> _deer = new();
+    private readonly List<AgentSocial> _deer = new();
+    private readonly List<AgentSocial> _wolves = new();
 
     private List<AgentSocial> _deerMatingQueue = new();
+    private List<AgentSocial> _wolvesMatingQueue = new();
     
     // public bool IsDirty { get; private set; }
     
@@ -27,17 +29,25 @@ public class SpeciesManager : MonoBehaviour
 
     public void Register(AgentSocial agentSocial)
     {
-        if (agentSocial.TryGetComponent<DeerBehaviourRunner>(out var deer))
+        if (agentSocial.gameObject.CompareTag("Deer"))
         {
-            _deer.Add(deer);
+            _deer.Add(agentSocial);
+        }
+        else if (agentSocial.gameObject.CompareTag("Wolf"))
+        {
+            _wolves.Add(agentSocial);
         }
     }
 
     public void CheckOut(AgentSocial agentSocial)
     {
-        if (agentSocial.TryGetComponent<DeerBehaviourRunner>(out var deer))
+        if (agentSocial.gameObject.CompareTag("Deer"))
         {
-            _deer.Remove(deer);
+            _deer.Remove(agentSocial);
+        }
+        else if (agentSocial.gameObject.CompareTag("Wolf"))
+        {
+            _wolves.Remove(agentSocial);
         }
     }
 
@@ -45,52 +55,67 @@ public class SpeciesManager : MonoBehaviour
     public bool TryGetSameSpecies(AgentSocial agentSocial, out List<AgentSocial> orderedSS, float maxRange)
     {
         orderedSS = null;
-        if (agentSocial.TryGetComponent<DeerBehaviourRunner>(out var deer))
-        {
-            Vector3 deerPos = deer.transform.position;
-            orderedSS = new();
-            //quitamos los que esten muy lejos
-            foreach (var d in _deer)
-            {
-                if(d != deer && Vector3.Distance(deerPos, d.transform.position) <= maxRange)
-                    orderedSS.Add(d.GetComponent<AgentSocial>());
-            }
-            
-            //ordenamos
-            orderedSS.Sort((a, b) => 
-                Vector3.Distance(deerPos, a.transform.position).
-                    CompareTo(Vector3.Distance(deerPos, b.transform.position)));
-        }
+        Vector3 agentPos = agentSocial.transform.position;
 
-        return orderedSS is not null && orderedSS.Count > 0;
+        List<AgentSocial> list = null;
+        
+        if (agentSocial.gameObject.CompareTag("Deer"))
+            list = _deer;
+        else if (agentSocial.gameObject.CompareTag("Wolf"))
+            list = _wolves;
+        
+        orderedSS = new();
+        //quitamos los que esten muy lejos
+        foreach (var other in list)
+        {
+            if(other != agentSocial && Vector3.Distance(agentPos, other.transform.position) <= maxRange)
+                orderedSS.Add(other);
+        }
+        
+        if (orderedSS is null || orderedSS.Count == 0) return false;
+        
+        orderedSS.Sort((a, b) => 
+            Vector3.Distance(agentPos, a.transform.position).
+                CompareTo(Vector3.Distance(agentPos, b.transform.position)));
+
+        return true;
     }
 
     public void RegisterToMate(AgentSocial agentSocial)
     {
-        if (agentSocial.TryGetComponent<DeerBehaviourRunner>(out var _))
-        {
-            for (int i = 0; i < _deerMatingQueue.Count; i++)
-            {
-                var other = _deerMatingQueue[i];
+        if (agentSocial.gameObject.CompareTag("Deer"))
+            RegisterToMate(_deerMatingQueue, agentSocial);
+        
+        else if (agentSocial.gameObject.CompareTag("Wolf"))
+            RegisterToMate(_wolvesMatingQueue, agentSocial);
+    }
 
-                if (agentSocial.GetGroupAlpha() == other.GetGroupAlpha())
-                {
-                    //match found
-                    _deerMatingQueue.RemoveAt(i);
-                    bool authority = Random.Range(0f, 1f) >= 0.5f;
-                    agentSocial.AssignPartner(other, authority);
-                    other.AssignPartner(agentSocial, !authority);
-                    return;
-                }
+    private void RegisterToMate(List<AgentSocial> matingQueue, AgentSocial agentSocial)
+    {
+        for (int i = 0; i < matingQueue.Count; i++)
+        {
+            var other = matingQueue[i];
+
+            if (agentSocial.GetGroupAlpha() == other.GetGroupAlpha())
+            {
+                //match found
+                matingQueue.RemoveAt(i);
+                bool authority = Random.Range(0f, 1f) >= 0.5f;
+                agentSocial.AssignPartner(other, authority);
+                other.AssignPartner(agentSocial, !authority);
+                return;
             }
-            
-            _deerMatingQueue.Add(agentSocial);
         }
+            
+        matingQueue.Add(agentSocial);
     }
 
     public void CheckOutFromMate(AgentSocial agentSocial)
     {
-        _deerMatingQueue.Remove(agentSocial);
+        if (agentSocial.gameObject.CompareTag("Deer"))
+            _deerMatingQueue.Remove(agentSocial);
+        else if (agentSocial.gameObject.CompareTag("Wolf"))
+            _wolvesMatingQueue.Remove(agentSocial);
     }
     
 
@@ -102,29 +127,5 @@ public class SpeciesManager : MonoBehaviour
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    private void OnGUI()
-    {
-        // Primer botón
-        if (GUI.Button(new Rect(700, 10, 300, 50), "Crear Sociedad"))
-        {
-            foreach (var deer in _deer)
-            {
-                var social = deer.GetComponent<AgentSocial>();
-                if (!social.HasLeader())
-                    social.FindAndSetLeader();
 
-            }
-        }
-
-    }
 }

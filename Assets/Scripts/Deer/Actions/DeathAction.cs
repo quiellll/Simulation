@@ -19,5 +19,6 @@ public class DeathAction : MonoBehaviour
         _health.Kill();
         _agentAnimator.SetDeath();
         Destroy(gameObject, 2.5f);
+        Debug.Log("Ha muerto alguien");
     }
 }
